@@ -27,7 +27,7 @@ EditorBuildSettings:
     path: Assets/Scenes/sides.unity
     guid: 4b098daaaab5b9d4087ebabfc47a7536
   - enabled: 1
-    path: Assets/Scenes/sides_pt2.unity
+    path: Assets/Scenes/TODO sides_pt2.unity
     guid: 1785ee0dfa5a0084e95d14e6aa0248b1
   - enabled: 1
     path: Assets/Scenes/Entree.unity
