@@ -45,7 +45,7 @@ public class CorrectPinLogin : MonoBehaviour
 		using (StreamWriter writer = new StreamWriter(userFilePath))
 		{
 			// Write the data to the file
-			writer.Write("admin");
+			writer.Write(username);
 		}
 	}
     private void WriteAdmin()
