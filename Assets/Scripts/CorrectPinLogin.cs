@@ -23,16 +23,23 @@ public class CorrectPinLogin : MonoBehaviour
 		if (text == "3141")
 		{
 			inputField.text = "";
-			WriteAdmin();
-			WriteCurrentUser("Waiter");
+			WriteCurrentUser("3141");
 			logout.interactable = true;
+			SceneManager.LoadScene("Scenes/menu");
 		}
-		if (text == "0000")
+		if (text == "5926")
 		{
 			inputField.text = "";
-			WriteAdmin();
-			WriteCurrentUser("Admin");
+			WriteCurrentUser("5926");
 			logout.interactable = true;
+			SceneManager.LoadScene("Scenes/menu");
+		}
+		if (text == "5358")
+		{
+			inputField.text = "";
+			WriteCurrentUser("5358");
+			logout.interactable = true;
+			SceneManager.LoadScene("Scenes/menu");
 		}
 	}
 
@@ -48,34 +55,4 @@ public class CorrectPinLogin : MonoBehaviour
 			writer.Write(username);
 		}
 	}
-    private void WriteAdmin()
-    {
-		bool isAdmin = false;
-
-        if (File.Exists(filePath))
-        {
-            using (StreamReader reader = new StreamReader(filePath))
-	        {
-    	        // Read the data from the file
-        	    string data = reader.ReadToEnd();
-				isAdmin = data.Contains("admin");
-				if (isAdmin)
-        	    	return;
-        	}
-        }
-        else
-        {
-            Debug.Log("File does not exist.");
-        }
-
-		if (isAdmin == false)
-		{
-			// Open the file for writing
-        	using (StreamWriter writer = new StreamWriter(filePath))
-        	{
-         	   // Write the data to the file
-         	   writer.Write("admin");
-        	}
-		}
-    }
 }
