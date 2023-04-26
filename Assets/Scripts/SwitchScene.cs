@@ -5,12 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class SwitchScene : MonoBehaviour
 {
-    private List<string> sceneHistory = new List<string>(); //this is where we save history of scene
-
+    //private List<string> sceneHistory = new List<string>(); //this is where we save history of scene
+    //[SerializeField]
+    //private string scene = "https://google.com";
+    [SerializeField] private string sceneToLoad;
 
     //reload the scene
     public void loadCurrentScene() {
-        Debug.Log("Scene Loaded"); //letting you know that the scene loaded
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); //loading the current scene
     }
     
@@ -24,6 +25,11 @@ public class SwitchScene : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 
+    public void LoadStringScene()
+    {
+        SceneManager.LoadScene(sceneToLoad);
+    }
+    
     //switch scene by name 
     public void LoadScene(string sceneName) {
         SceneManager.LoadScene(sceneName);
