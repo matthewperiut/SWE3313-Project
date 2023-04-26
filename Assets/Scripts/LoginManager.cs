@@ -5,7 +5,6 @@ using TMPro;
 
 public class LoginManager : MonoBehaviour
 {
-    /*
     public TMP_InputField pinInputField;
     public Button submitButton;
     public string floorStatusSceneName = "FloorStatus";
@@ -43,5 +42,5 @@ public class LoginManager : MonoBehaviour
             Debug.LogWarning("Invalid PIN.");
             pinInputField.text = ""; // Clear the input field.
         }
-    }*/
+    }
 }
