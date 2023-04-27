@@ -9,11 +9,17 @@ public class AppendText : MonoBehaviour
     [SerializeField] private TMP_InputField inputField;
     [SerializeField] private string text;
 
+    /// <summary>
+    /// Appends the text to the input field.
+    /// </summary>
     public void append()
     {
         inputField.text += text;
     }
 
+    /// <summary>
+    /// Removes the last character from the input field if it's not empty.
+    /// </summary>
     public void remove()
     {
         if (inputField.text.Length > 0)

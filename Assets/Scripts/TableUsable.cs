@@ -1,3 +1,6 @@
+/// <summary>
+/// This script sets the button color based on a randomly generated number and checks whether a code exists in a file to enable the button.
+/// </summary>
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -42,6 +45,9 @@ public class TableUsable : MonoBehaviour
             button.image.color = yellow;
     }
 
+    /// <summary>
+    /// Loads the menu screen.
+    /// </summary>
     public void MenuScreen()
     {
         SceneManager.LoadScene("Scenes/menu");

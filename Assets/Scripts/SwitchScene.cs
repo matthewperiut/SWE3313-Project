@@ -1,3 +1,6 @@
+/// <summary>
+/// This script allows the user to switch between scenes and reload the current scene.
+/// </summary>
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,31 +13,46 @@ public class SwitchScene : MonoBehaviour
     //private string scene = "https://google.com";
     [SerializeField] private string sceneToLoad;
 
-    //reload the scene
+    /// <summary>
+    /// Reloads the current scene.
+    /// </summary>
     public void loadCurrentScene() {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); //loading the current scene
     }
     
-    //go forward a scene
+    /// <summary>
+    /// Loads the next scene.
+    /// </summary>
     public void goNext() {
         Debug.Log("Next scene loaded");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
-    //go back a scene
+
+    /// <summary>
+    /// Loads the previous scene.
+    /// </summary>
     public void goBack() {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 
+    /// <summary>
+    /// Loads the scene specified by the string name.
+    /// </summary>
     public void LoadStringScene()
     {
         SceneManager.LoadScene(sceneToLoad);
     }
     
-    //switch scene by name 
+    /// <summary>
+    /// Loads the scene specified by the name.
+    /// </summary>
     public void LoadScene(string sceneName) {
         SceneManager.LoadScene(sceneName);
     }
 
+    /// <summary>
+    /// Loads the login scene.
+    /// </summary>
     public void loadLoginScene() {
         SceneManager.LoadScene(2);
     }

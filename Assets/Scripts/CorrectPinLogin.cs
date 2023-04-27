@@ -18,6 +18,9 @@ public class CorrectPinLogin : MonoBehaviour
         userFilePath = Path.Combine(Application.persistentDataPath, "user.txt");
     }
 
+	/// <summary>
+	/// Tests the input field text for a correct pin and loads the floor status scene if the pin is correct.
+	/// </summary>
 	public void Test()
 	{
 		string text = inputField.text;
@@ -44,6 +47,10 @@ public class CorrectPinLogin : MonoBehaviour
 		}
 	}
 
+	/// <summary>
+	/// Writes the current user's pin to the user data file.
+	/// </summary>
+	/// <param name="username">The user's pin.</param>
 	private void WriteCurrentUser(string username)
 	{
 		if (File.Exists(userFilePath))

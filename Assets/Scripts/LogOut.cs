@@ -27,6 +27,9 @@ public class LogOut : MonoBehaviour
         }
     }
     
+    /// <summary>
+    /// Deletes the file and disables the logout button.
+    /// </summary>
     public void run()
     {
         if (File.Exists(filePath))
