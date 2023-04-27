@@ -2,6 +2,7 @@ using System.IO;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CorrectPinLogin : MonoBehaviour
 {
@@ -25,21 +26,21 @@ public class CorrectPinLogin : MonoBehaviour
 			inputField.text = "";
 			WriteCurrentUser("3141");
 			logout.interactable = true;
-			SceneManager.LoadScene("Scenes/menu");
+			SceneManager.LoadScene("Scenes/floor_status");
 		}
 		if (text == "5926")
 		{
 			inputField.text = "";
 			WriteCurrentUser("5926");
 			logout.interactable = true;
-			SceneManager.LoadScene("Scenes/menu");
+			SceneManager.LoadScene("Scenes/floor_status");
 		}
 		if (text == "5358")
 		{
 			inputField.text = "";
 			WriteCurrentUser("5358");
 			logout.interactable = true;
-			SceneManager.LoadScene("Scenes/menu");
+			SceneManager.LoadScene("Scenes/floor_status");
 		}
 	}
 

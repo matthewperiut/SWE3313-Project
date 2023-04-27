@@ -1641,53 +1641,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputField: {fileID: 1651275444}
   text: 1
---- !u!1 &597067828
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 597067830}
-  - component: {fileID: 597067829}
-  m_Layer: 0
-  m_Name: LoginManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &597067829
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 597067828}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe94bbc2f6fbbe14c8e1ae1090de9f7c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pinInputField: {fileID: 1651275444}
-  submitButton: {fileID: 1265150170}
-  floorStatusSceneName: FloorStatus
---- !u!4 &597067830
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 597067828}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 680, y: 304.6203, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &603391553
 GameObject:
   m_ObjectHideFlags: 0
@@ -2816,51 +2769,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputField: {fileID: 1651275444}
   text: 6
---- !u!1 &985672366
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 985672368}
-  - component: {fileID: 985672367}
-  m_Layer: 0
-  m_Name: UserDataManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &985672367
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 985672366}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c33754245de181f4e83fd34e79c8ac99, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  users: []
---- !u!4 &985672368
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 985672366}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 527.4729, y: 302.56082, z: -8.966888}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1049027119
 GameObject:
   m_ObjectHideFlags: 0
@@ -2872,6 +2780,7 @@ GameObject:
   - component: {fileID: 1049027120}
   - component: {fileID: 1049027122}
   - component: {fileID: 1049027121}
+  - component: {fileID: 1049027123}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -2998,6 +2907,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1049027119}
   m_CullTransparentMesh: 1
+--- !u!114 &1049027123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1049027119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4f9606049d0446c293dda65f38ee2a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputField: {fileID: 0}
+  logout: {fileID: 0}
 --- !u!1 &1068113795
 GameObject:
   m_ObjectHideFlags: 0
@@ -3502,9 +3425,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1265150173}
         m_TargetAssemblyTypeName: CorrectPinLogin, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: Test
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3565,7 +3488,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputField: {fileID: 1651275444}
-  logout: {fileID: 0}
+  logout: {fileID: 2060358353}
 --- !u!1 &1300302616
 GameObject:
   m_ObjectHideFlags: 0
@@ -4672,7 +4595,7 @@ RectTransform:
   m_Children:
   - {fileID: 1821834691}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
