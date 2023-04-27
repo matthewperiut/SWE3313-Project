@@ -4,6 +4,7 @@ using TMPro;
 using UnityEngine;
 using System.IO;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class TableUsable : MonoBehaviour
 {
@@ -39,5 +40,10 @@ public class TableUsable : MonoBehaviour
             button.image.color = green;
         if (randomInt == 2)
             button.image.color = yellow;
+    }
+
+    public void MenuScreen()
+    {
+        SceneManager.LoadScene("Scenes/menu");
     }
 }

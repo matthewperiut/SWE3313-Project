@@ -859,7 +859,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 890385713}
   m_Direction: 0
   m_Value: 0
-  m_Size: 0.9999999
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -2902,7 +2902,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.0003014459}
+  m_AnchoredPosition: {x: 0, y: 0.00052542955}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &1255254588
@@ -3039,6 +3039,7 @@ GameObject:
   - component: {fileID: 1267067109}
   - component: {fileID: 1267067108}
   - component: {fileID: 1267067107}
+  - component: {fileID: 1267067110}
   m_Layer: 5
   m_Name: ReturnMainMenuButton
   m_TagString: Untagged
@@ -3110,7 +3111,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1267067108}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1267067110}
+        m_TargetAssemblyTypeName: GenericLoadScene, Assembly-CSharp
+        m_MethodName: LoadStringScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1267067108
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3149,6 +3162,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1267067105}
   m_CullTransparentMesh: 1
+--- !u!114 &1267067110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1267067105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: baa09efbafb524b9897d52140abef2ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneToLoad: Scenes/floor_status
 --- !u!1 &1356056039
 GameObject:
   m_ObjectHideFlags: 0
@@ -3233,7 +3259,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 112278114}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.9945732
+  m_Size: 0.99996936
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -3508,6 +3534,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1622ccbe1cfd6254abd25e556ba90115, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneToLoad: 
 --- !u!4 &1588254325
 Transform:
   m_ObjectHideFlags: 0
